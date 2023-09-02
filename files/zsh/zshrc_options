@@ -1,0 +1,16 @@
+# Ctrl+Dでログアウトしてしまうことを防ぐ
+setopt IGNOREEOF
+setopt nonomatch
+# 他のターミナルとヒストリーを共有
+setopt share_history
+# ヒストリーに重複を表示しない
+# cdコマンドを省略して、ディレクトリ名のみの入力で移動
+setopt auto_cd
+
+# 自動でpushdを実行
+setopt auto_pushd
+
+# pushdから重複を削除
+setopt pushd_ignore_dups
+setopt histignorealldups
+setopt no_flow_control

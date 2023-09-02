@@ -1,0 +1,11 @@
+# emacsキーバインド
+bindkey -e
+
+stty erase ^H
+bindkey "^[[3~" delete-char
+
+
+autoload -Uz select-word-style
+select-word-style default
+zstyle ':zle:*' word-chars "_-./;@"
+zstyle ':zle:*' word-style unspecified
