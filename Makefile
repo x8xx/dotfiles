@@ -2,13 +2,16 @@
 	./scripts/build_zshrc.sh
 	ln -sf ~/dotfiles/files/.zshrc  ~/
 
-~/.tmux.conf: files/.tmux.conf
+~/.tmux.conf:
 	ln -sf ~/dotfiles/files/.tmux.conf ~/
 
-~/.gitconfig: files/.gitconfig
+~/.gitconfig:
 	ln -sf ~/dotfiles/files/.gitconfig ~/
+
+~/.config/nvim/:
+	ln -sf ~/dotfiles/files/nvim/ ~/.config/nvim
 
 clean:
 	rm -f files/.zshrc
 
-.PHONY: clean
+.PHONY: clean ~/.tmux.conf ~/.gitconfig ~/.config/nvim
