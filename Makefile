@@ -1,3 +1,5 @@
+all: ~/.zshrc ~/.tmux.conf ~/.gitconfig ~/.config/nvim
+
 ~/.zshrc: files/zsh/zshrc_*
 	./scripts/build_zshrc.sh
 	ln -sf ~/dotfiles/files/.zshrc  ~/
