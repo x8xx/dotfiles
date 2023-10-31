@@ -5,7 +5,8 @@ require("telescope").setup({
         mappings = {
             i = {
                 ["<TAB>"] = actions.select_tab,
-                ["<C-S>"] = actions.select_horizontal
+                ["<C-S>"] = actions.select_horizontal,
+                ["<C-w>"] = actions.send_to_qflist
             }
         }
     },
