@@ -1,0 +1,26 @@
+# prevention Ctrl+D logout
+setopt IGNOREEOF
+# meta char countermeasure
+setopt nonomatch
+# share history other terminal
+setopt share_history
+# no record duplicate history
+setopt histignorealldups
+setopt extended_history
+
+setopt hist_no_store
+
+# 自動でpushdを実行
+setopt auto_pushd
+# pushdから重複を削除
+setopt pushd_ignore_dups
+
+setopt no_flow_control
+
+setopt auto_param_keys
+
+# stop sound
+setopt nobeep
+setopt nolistbeep
+
+

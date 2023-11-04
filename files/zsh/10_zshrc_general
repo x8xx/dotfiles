@@ -1,0 +1,17 @@
+export LANG=ja_JP.UTF-8
+
+autoload -Uz colors
+colors
+
+chpwd() { ls -ltr }
+
+cdpath=(~)
+
+autoload -Uz add-zsh-hook
+autoload -Uz chpwd_recent_dirs cdr
+add-zsh-hook chpwd chpwd_recent_dirs
+zstyle ":chpwd:*" recent-dirs-default true
+
+autoload -Uz zmv
+alias zmv='noglob zmv -W'
+

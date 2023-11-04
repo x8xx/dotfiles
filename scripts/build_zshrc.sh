@@ -10,7 +10,3 @@ do
     echo $CONF
     echo "source ~/dotfiles/files/zsh/${CONF}" >> ../files/.zshrc
 done
-
-if [[ -f ~//dotfiles/files/zsh/zshrc_secret ]]; then
-    echo "source ~/dotfiles/files/zsh/zshrc_secret" >> ../files/.zshrc
-fi
