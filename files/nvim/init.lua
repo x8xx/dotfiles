@@ -1,5 +1,6 @@
 require('base')
 require('plugins')
 require('options')
+require('buffer')
 require('keybinds')
 require('color')

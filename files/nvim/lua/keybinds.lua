@@ -44,3 +44,6 @@ vim.api.nvim_set_keymap("n", "<leader>b", ":<C-u>Telescope buffers<CR>", {norema
 -- vim.api.nvim_set_keymap("n", "<leader>n", ":<C-u>Telescope file_browser<CR>", {noremap=true})
 vim.api.nvim_set_keymap("n", "<leader>n", ":<C-u>Neotree<CR>", {noremap=true})
 vim.api.nvim_set_keymap("n", "<leader>y", ":<C-u>Telescope yank_history<CR>", {noremap=true})
+
+-- mycommand
+vim.api.nvim_set_keymap("n", "<leader>d", ":Bd<CR>", {noremap=true})
