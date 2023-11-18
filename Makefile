@@ -1,4 +1,4 @@
-all: ~/.zshrc ~/.tmux.conf ~/.gitconfig ~/.config/nvim
+all: ~/.zshrc ~/.tmux.conf ~/.gitconfig ~/.config/nvim/
 
 ~/.zshrc: files/zsh/*zshrc_*
 	./scripts/build_zshrc.sh
@@ -16,4 +16,4 @@ all: ~/.zshrc ~/.tmux.conf ~/.gitconfig ~/.config/nvim
 clean:
 	rm -f files/.zshrc
 
-.PHONY: clean ~/.tmux.conf ~/.gitconfig ~/.config/nvim
+.PHONY: clean ~/.tmux.conf ~/.gitconfig ~/.config/nvim/
