@@ -12,13 +12,13 @@ require("neo-tree").setup({
         },
         window = {
             mappings = {
-                ["Oc"] = { "order_by_created", nowait = false },
-                ["Od"] = { "order_by_diagnostics", nowait = false },
-                ["Og"] = { "order_by_git_status", nowait = false },
-                ["Om"] = { "order_by_modified", nowait = false },
-                ["On"] = { "order_by_name", nowait = false },
-                ["Os"] = { "order_by_size", nowait = false },
-                ["Ot"] = { "order_by_type", nowait = false },
+                -- ["Oc"] = { "order_by_created", nowait = false },
+                -- ["Od"] = { "order_by_diagnostics", nowait = false },
+                -- ["Og"] = { "order_by_git_status", nowait = false },
+                -- ["Om"] = { "order_by_modified", nowait = false },
+                -- ["On"] = { "order_by_name", nowait = false },
+                -- ["Os"] = { "order_by_size", nowait = false },
+                -- ["Ot"] = { "order_by_type", nowait = false },
             }
         }
     },

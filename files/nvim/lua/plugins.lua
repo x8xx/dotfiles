@@ -2,8 +2,7 @@
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({
-    "git",
-    "clone",
+    "git", "clone",
     "--filter=blob:none",
     "https://github.com/folke/lazy.nvim.git",
     "--branch=stable", -- latest stable release
@@ -248,4 +247,48 @@ require("lazy").setup({
             }
         end
     },
+    -- github copilot
+    {
+        "github/copilot.vim",
+    },
+    -- nvim-dap
+    {
+        "mfussenegger/nvim-dap",
+        config = function()
+            require("plugin_setup/dap/dap")
+        end
+    },
+    {
+        "rcarriga/nvim-dap-ui",
+        config = function()
+            require("plugin_setup/dap/dap-ui")
+        end
+
+    },
+    {
+        "theHamsta/nvim-dap-virtual-text",
+        config = function()
+            require("plugin_setup/dap/dap-vtext")
+        end
+
+    },
+    {
+        "nvim-treesitter/nvim-treesitter",
+        build = ":TSUpdate",
+        -- config = function()
+        -- end
+
+    },
+    {
+        "leoluz/nvim-dap-go",
+        config = function()
+            require("plugin_setup/dap/go")
+        end
+    },
+    {
+        "mfussenegger/nvim-dap-python",
+        config = function()
+            require("plugin_setup/dap/python")
+        end
+    }
 })
