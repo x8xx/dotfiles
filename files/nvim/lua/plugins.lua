@@ -126,6 +126,16 @@ require("lazy").setup({
         end
     },
 
+    -- ast-grep
+    {
+      "Marskey/telescope-sg",
+      dependencies = {'nvim-lua/plenary.nvim', 'nvim-telescope/telescope.nvim'},
+      config = function()
+        require("telescope").load_extension("ast_grep")
+      end
+    },
+
+
     -- file tree
     {
         "nvim-neo-tree/neo-tree.nvim",
