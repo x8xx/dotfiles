@@ -1,6 +1,7 @@
 vim.g.mapleader = " "
 
 -- vim.api.nvim_set_keymap("i", "jj", "<Esc>", {noremap=true})
+vim.api.nvim_set_keymap("i", "<C-c>", "<C-]><C-c>", {noremap=true})
 vim.api.nvim_set_keymap("n", "<Tab>", "gt", {noremap=true})
 vim.api.nvim_set_keymap("n", "<S-Tab>", "gT", {noremap=true})
 
