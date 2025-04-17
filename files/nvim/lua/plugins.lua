@@ -72,21 +72,21 @@ require("lazy").setup({
     -- replace surround symbol
     "tpope/vim-surround",
     -- UI for messages, cmdline and popupmenu
-    {
-      "folke/noice.nvim",
-      event = "VeryLazy",
-      opts = {
-        -- add any options here
-      },
-      dependencies = {
-        -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
-        "MunifTanjim/nui.nvim",
-        -- OPTIONAL:
-        --   `nvim-notify` is only needed, if you want to use the notification view.
-        --   If not available, we use `mini` as the fallback
-        "rcarriga/nvim-notify",
-        }
-    },
+    -- {
+    --   "folke/noice.nvim",
+    --   event = "VeryLazy",
+    --   opts = {
+    --     -- add any options here
+    --   },
+    --   dependencies = {
+    --     -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
+    --     "MunifTanjim/nui.nvim",
+    --     -- OPTIONAL:
+    --     --   `nvim-notify` is only needed, if you want to use the notification view.
+    --     --   If not available, we use `mini` as the fallback
+    --     "rcarriga/nvim-notify",
+    --     }
+    -- },
 
     -- yank history
     {
@@ -260,6 +260,18 @@ require("lazy").setup({
     -- github copilot
     {
         "github/copilot.vim",
+    },
+    -- Copilot Chat
+    {
+        "CopilotC-Nvim/CopilotChat.nvim",
+        dependencies = {
+          { "github/copilot.vim" }, -- or zbirenbaum/copilot.lua
+          { "nvim-lua/plenary.nvim", branch = "master" }, -- for curl, log and async functions
+        },
+        build = "make tiktoken", -- Only on MacOS or Linux
+        config = function()
+            require("plugin_setup/copilot-chat")
+        end
     },
     -- nvim-dap
     {

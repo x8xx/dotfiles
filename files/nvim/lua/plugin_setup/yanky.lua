@@ -1,9 +1,13 @@
+local utils = require("yanky.utils")
+local mapping = require("yanky.telescope.mapping")
+
 require("yanky").setup({
       ring = {
-        history_length = 100,
+        history_length = 200,
         storage = "shada",
         sync_with_numbered_registers = true,
         cancel_event = "update",
+        update_register_on_cycle = true,
       },
       picker = {
         select = {
@@ -11,7 +15,12 @@ require("yanky").setup({
         },
         telescope = {
           use_default_mappings = true, -- if default mappings should be used
-          mappings = nil, -- nil to use default mappings or no mappings (see `use_default_mappings`)
+          mappings = {
+              i = {
+                  ["<c-x>"] = mapping.delete(),
+                  ["<c-r>"] = mapping.set_register(utils.get_default_register()),
+              },
+          },
         },
       },
       system_clipboard = {

@@ -8,10 +8,15 @@ require("telescope").setup({
                 ["<C-S>"] = actions.select_horizontal,
                 ["<C-w>"] = actions.send_to_qflist
             }
-        }
+        },
+        file_ignore_patterns = {
+          "^.git/",
+        },
     },
     extensions = {
         file_browser = {
+            hijack_netrw = true,
+            hide_parent_dir = true,
             depth = 1,
         },
         ast_grep = {
