@@ -1,7 +1,6 @@
 local select = require('CopilotChat.select')
 
 require("CopilotChat").setup({
-    auto_insert_mode = true,
     mappings = {
         close = {
             insert = "<ESC>",

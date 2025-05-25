@@ -17,7 +17,15 @@ require("telescope").setup({
         file_browser = {
             hijack_netrw = true,
             hide_parent_dir = true,
+            hidden = { file_browser = true, folder_browser = true },
             depth = 1,
+            mappings = {
+                ["i"] = {
+                    ["<Esc>"] = function()
+                        vim.cmd("message 'File Browser'")
+                    end,
+                },
+            }
         },
         ast_grep = {
             command = {

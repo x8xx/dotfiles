@@ -64,9 +64,12 @@ require("lazy").setup({
     -- window resize
     "simeji/winresizer",
     -- commentout
-    "/tpope/vim-commentary",
+    "tpope/vim-commentary",
     -- terminal
-    "Shougo/deol.nvim",
+    {
+        "Shougo/deol.nvim",
+        commit = "8b82f690c65450a391dc16e7567ab0627293701c",
+    },
     -- bracket completion
     "cohama/lexima.vim",
     -- replace surround symbol
@@ -110,7 +113,7 @@ require("lazy").setup({
 
     -- fzf
     {
-        "nvim-telescope/telescope.nvim", tag = "0.1.2",
+        "nvim-telescope/telescope.nvim", tag = "0.1.8",
         dependencies = { "nvim-lua/plenary.nvim" },
         config = function()
             require("plugin_setup/telescope")
@@ -199,6 +202,11 @@ require("lazy").setup({
         },
         config = function()
              local cmp = require("cmp")
+             vim.diagnostic.config({
+                -- virtual_lines = true,
+                 virtual_text = true,
+
+              })
              cmp.setup {
                  snippet = {
                    expand = function(args)
@@ -261,7 +269,6 @@ require("lazy").setup({
     {
         "github/copilot.vim",
     },
-    -- Copilot Chat
     {
         "CopilotC-Nvim/CopilotChat.nvim",
         dependencies = {
@@ -273,6 +280,10 @@ require("lazy").setup({
             require("plugin_setup/copilot-chat")
         end
     },
+    -- -- vim-ai
+    -- {
+    --     "madox2/vim-ai"
+    -- },
     -- nvim-dap
     {
         "mfussenegger/nvim-dap",
@@ -282,6 +293,7 @@ require("lazy").setup({
     },
     {
         "rcarriga/nvim-dap-ui",
+        dependencies = { "nvim-neotest/nvim-nio" },
         config = function()
             require("plugin_setup/dap/dap-ui")
         end

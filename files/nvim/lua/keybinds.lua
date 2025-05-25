@@ -26,19 +26,20 @@ vim.keymap.set("n", "dd", function()
 end, { noremap = true, silent = true })
 
 vim.api.nvim_set_keymap("n", "<leader>1", ":<C-u>b #<CR>", {noremap=true})
-vim.api.nvim_set_keymap("n", "<leader>2", ":<C-u>CopilotChatOpen<CR>", {noremap=true})
+-- vim.api.nvim_set_keymap("n", "<leader>2", ":<C-u>CopilotChatOpen<CR>", {noremap=true})
+vim.api.nvim_set_keymap("n", "<leader>2", "<cmd>lua require'CopilotChat'.open({ selection = require'CopilotChat.select'.buffer })<CR>", {noremap=true})
 vim.api.nvim_set_keymap("n", "<leader>3", ":<C-u>noh<CR>", {noremap=true})
--- vim.api.nvim_set_keymap("n", "<leader>4", ":<C-u>Neotree<CR>", {noremap=true})
--- vim.api.nvim_set_keymap("n", "<leader>4", ":<C-u>Neotree close<CR>", {noremap=true})
 
 --word search
 vim.api.nvim_set_keymap("n", "#", "*", {noremap=true})
 vim.api.nvim_set_keymap("n", "*", "#", {noremap=true})
 
 --deol
-vim.api.nvim_set_keymap("n", "<leader>o", ":<C-u>Deol -split=floating -winheight=60 -winwidth=160<CR>", {noremap=true})
+vim.api.nvim_set_keymap("n", "<leader>o", ":<C-u>Deol -split=floating -winheight=55 -winwidth=160<CR>", {noremap=true})
+-- vim.api.nvim_set_keymap("n", "<leader>o", ":<C-u>:call deol#start({'split': 'floating', 'winheight': 55, 'winwidth': 160})<CR>", {noremap=true})
 vim.api.nvim_set_keymap("t", "<ESC>", "<C-\\><C-n>", {noremap=true})
 vim.api.nvim_set_keymap("t", "<C-\\>", "<C-\\><C-n>", {noremap=true})
+-- vim.api.nvim_set_keymap("t", "<C-\\>q", "<C-\\><C-n>:q<CR>", {noremap=true}):wq
 
 --neogit
 -- vim.api.nvim_set_keymap("n", "<leader>", ":<C-u>Neogit<CR>", {noremap=true})
