@@ -29,6 +29,7 @@ vim.api.nvim_set_keymap("n", "<leader>1", ":<C-u>b #<CR>", {noremap=true})
 -- vim.api.nvim_set_keymap("n", "<leader>2", ":<C-u>CopilotChatOpen<CR>", {noremap=true})
 vim.api.nvim_set_keymap("n", "<leader>2", "<cmd>lua require'CopilotChat'.open({ selection = require'CopilotChat.select'.buffer })<CR>", {noremap=true})
 vim.api.nvim_set_keymap("n", "<leader>3", ":<C-u>noh<CR>", {noremap=true})
+vim.api.nvim_set_keymap("n", "<leader>4", "/- (x).*<CR>", {noremap=true})
 
 --word search
 vim.api.nvim_set_keymap("n", "#", "*", {noremap=true})
@@ -69,3 +70,8 @@ vim.api.nvim_set_keymap("n", "<leader>a", ":Sccap<CR>", {noremap=true})
 
 -- mycommand
 vim.api.nvim_set_keymap("n", "<leader>d", ":Bd<CR>", {noremap=true})
+
+--todo
+vim.api.nvim_set_keymap("v", "2", ":s/^/- (x) /<CR>", {noremap=true})
+vim.api.nvim_set_keymap("v", "q", ":s/^- (x) /- (\\/) /<CR>", {noremap=true})
+vim.api.nvim_set_keymap("v", "a", ":s/^- (\\/) /- (x) /<CR>", {noremap=true})
