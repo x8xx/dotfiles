@@ -9,9 +9,6 @@ alias l='ls -ltr --color=auto'
 alias la='ls -la --color=auto'
 alias ll='ls -l --color=auto'
 alias so='source'
-alias v='vim'
-alias vi='vim'
-alias vz='vim ~/.zshrc'
 alias c='cdr'
 alias h='fc -lt '%F %T' 1'
 alias cp='cp -i'
@@ -21,7 +18,14 @@ alias back='pushd'
 alias diff='diff -U1'
 alias sshn='ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null'
 
-alias vim='nvim'
 alias m='make'
 alias http='python -m http.server'
 alias piping='docker run -it --rm -p 8888:80 nwtgck/piping-server --http-port=80'
+
+alias g="git"
+alias tf="terraform"
+
+alias v='vim'
+alias vi='vim'
+alias vz='vim ~/.zshrc'
+alias vim='nvim'
