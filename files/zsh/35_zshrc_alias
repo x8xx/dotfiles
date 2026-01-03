@@ -19,8 +19,8 @@ alias diff='diff -U1'
 alias sshn='ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null'
 
 alias m='make'
-alias http='python -m http.server'
 alias piping='docker run -it --rm -p 8888:80 nwtgck/piping-server --http-port=80'
+alias todos='python3 ~/dotfiles/files/todo/todo_server.py'
 
 alias g="git"
 alias tf="terraform"
