@@ -1,6 +1,11 @@
 local actions = require("telescope.actions")
 
 require("telescope").setup({
+    pickers = {
+        find_files = {
+            no_ignore = true,
+        }
+    },
     defaults = {
         mappings = {
             i = {
@@ -11,6 +16,9 @@ require("telescope").setup({
         },
         file_ignore_patterns = {
           "^.git/",
+          "venv/",
+          "node_modules/",
+          "__pycache__/",
         },
     },
     extensions = {
