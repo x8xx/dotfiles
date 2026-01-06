@@ -3,7 +3,13 @@ local actions = require("telescope.actions")
 require("telescope").setup({
     pickers = {
         find_files = {
-            no_ignore = true,
+            -- trueは重いなぁ
+            -- no_ignore = true,
+            no_ignore = false,
+            hidden = true,
+        },
+       live_grep = {
+            only_sort_text = false
         }
     },
     defaults = {
@@ -16,9 +22,11 @@ require("telescope").setup({
         },
         file_ignore_patterns = {
           "^.git/",
-          "venv/",
+          ".*venv/",
           "node_modules/",
           "__pycache__/",
+          ".tmp/",
+          ".github/.*_results/"
         },
     },
     extensions = {
