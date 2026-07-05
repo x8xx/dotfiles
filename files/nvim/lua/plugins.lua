@@ -270,59 +270,10 @@ require("lazy").setup({
         "github/copilot.vim",
     },
     {
-        "CopilotC-Nvim/CopilotChat.nvim",
-        dependencies = {
-          { "github/copilot.vim" }, -- or zbirenbaum/copilot.lua
-          { "nvim-lua/plenary.nvim", branch = "master" }, -- for curl, log and async functions
-        },
-        build = "make tiktoken", -- Only on MacOS or Linux
-        config = function()
-            require("plugin_setup/copilot-chat")
-        end
-    },
-    -- -- vim-ai
-    -- {
-    --     "madox2/vim-ai"
-    -- },
-    -- nvim-dap
-    {
-        "mfussenegger/nvim-dap",
-        config = function()
-            require("plugin_setup/dap/dap")
-        end
-    },
-    {
-        "rcarriga/nvim-dap-ui",
-        dependencies = { "nvim-neotest/nvim-nio" },
-        config = function()
-            require("plugin_setup/dap/dap-ui")
-        end
-
-    },
-    {
-        "theHamsta/nvim-dap-virtual-text",
-        config = function()
-            require("plugin_setup/dap/dap-vtext")
-        end
-
-    },
-    {
         "nvim-treesitter/nvim-treesitter",
         build = ":TSUpdate",
         -- config = function()
         -- end
 
     },
-    {
-        "leoluz/nvim-dap-go",
-        config = function()
-            require("plugin_setup/dap/go")
-        end
-    },
-    {
-        "mfussenegger/nvim-dap-python",
-        config = function()
-            require("plugin_setup/dap/python")
-        end
-    }
 })
