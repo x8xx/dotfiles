@@ -1,0 +1,24 @@
+{
+  "agents": {
+    "claude": {
+      "default_effort": "medium",
+      "default_model": "claude-opus-5-5"
+    }
+  },
+  "default_agent": "claude",
+  "enabled_agents": [
+    "claude"
+  ],
+  "manager_agent": "claude",
+  "tui": {
+    "active_tab": "1",
+    "daemons": {},
+    "editor": "vi",
+    "kanban_view": "",
+    "keymap": {},
+    "sidebar_collapsed": false,
+    "sidebar_width": 44,
+    "ui_mode": "insert",
+    "waiting_view": false
+  }
+}
