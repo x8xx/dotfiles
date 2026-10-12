@@ -1,4 +1,4 @@
-all: ~/.zshrc ~/.tmux.conf ~/.gitconfig ~/.config/nvim/ ~/sashimi.json
+all: ~/.zshrc ~/.tmux.conf ~/.gitconfig ~/.config/nvim/ ~/.sashimi.json
 
 ~/.zshrc: files/zsh/*zshrc_*
 	./scripts/build_zshrc.sh
@@ -13,10 +13,10 @@ all: ~/.zshrc ~/.tmux.conf ~/.gitconfig ~/.config/nvim/ ~/sashimi.json
 ~/.config/nvim/:
 	ln -sf ~/dotfiles/files/nvim/ ~/.config/nvim
 
-~/sashimi.json:
-	ln -sf ~/dotfiles/files/sashimi/sashimi.json ~/
+~/.sashimi.json:
+	ln -sf ~/dotfiles/files/sashimi/.sashimi.json ~/
 
 clean:
 	rm -f files/.zshrc
 
-.PHONY: clean ~/.tmux.conf ~/.gitconfig ~/.config/nvim/ ~/sashimi.json
+.PHONY: clean ~/.tmux.conf ~/.gitconfig ~/.config/nvim/ ~/.sashimi.json
